@@ -1,0 +1,13 @@
+The docs for instrumenting your Sinatra app with New Relic on Heroku are either wrong or a bit sparse. Its actually very simple.
+
+1. Add the 'newrelic_rpm' gem to either your .gems or Gemfile
+2. require the 'rpm' library when in production
+	configure :production do
+	  require 'newrelic_rpm'
+	end
+3. add the heroku new_relic addon
+	heroku addons:add newrelic:bronze
+	
+	
+
+
